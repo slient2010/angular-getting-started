@@ -30,7 +30,7 @@
 
 Angular 应用程序由一棵组件树组成，每个 Angular 组件都有一个明确的用途和责任。`
 
-![app-components](https://angular.cn/generated/images/guide/start/app-components.png)
+![app-components](./images/app-componets.png)
 
 - app-root（橙色框）是应用的外壳。这是要加载的第一个组件，也是所有其它组件的父组件。你可以把它想象成一个基础页面。
 
