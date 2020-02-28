@@ -1,0 +1,5 @@
+<p *ngIf="product.price > 700">
+  <!-- 用事件绑定更新“Notify Me”按钮，以调用 notify.emit() 方法。 -->
+  <button (click)="notify.emit()">Notify Me</button>
+  <!-- 接下来，定义当用户单击该按钮时应该发生的行为。回想一下，应该由父组件（商品列表组件）采取行动，而不是商品提醒组件。在 product-list.component.ts 文件中，定义一个 onNotify() 方法，类似于 share() 方法： -->
+</p>

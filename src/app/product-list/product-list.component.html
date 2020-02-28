@@ -1,0 +1,35 @@
+<h2>Products</h2>
+<!-- Angular 模板语法的五个常用特性： -->
+<!-- *ngFor -->
+<!-- *ngIf -->
+<!-- 插值 {{}} -->
+<!-- 属性绑定 [] -->
+<!-- 事件绑定 () -->	
+
+<!-- *ngFor 是一个 "结构型指令"。结构型指令会通过添加、删除和操纵它们的宿主元素等方式塑造或重塑 DOM 的结构。任何带有星号 * 的指令都是结构型指令。 -->
+<div *ngFor="let product of products">
+	<h3>
+		<!-- 每个商品名称都能链接到商品详情。属性绑定语法 [] 则允许你在模板表达式中使用属性值。 -->
+		<a [title]="product.name + ' details'">
+		<!-- 显示产品名称 -->
+		{{ product.name }}
+		</a>
+	</h3>
+	<!-- 使用 *ngIf 指令，这样 Angular 只会在当前商品有描述信息的情况下创建这个 <p> 元素 -->
+	<p *ngIf = "product.description">
+		Description: {{ product.description }}
+	</p>
+	<!-- 把 button 的 click 事件绑定到我们替你定义好的 share() 方法上（位于 product-list.component.ts ）。事件绑定是通过把事件名称包裹在圆括号 ( ) 中完成的-->
+	<button (click)="share()">
+		Share
+	</button>
+
+	<!-- 把这个新商品提醒组件显示为该商品列表的一部分（子组件）。 -->
+	<!-- 要包含这个新组件，只要像使用 HTML 元素一样使用它的选择器（ app-product-alert ）就可以了。 -->
+	<!-- 通过属性绑定把当前商品作为输入传给组件。 -->
+	<!-- 把 app-product-alerts 组件（就是它显示的“Notify Me”按钮）的 notify 事件绑定到商品列表组件的 onNotify() 方法。 -->
+	<app-product-alerts
+	  [product]="product"
+	  (notify)="onNotify()">
+	</app-product-alerts>
+</div>
