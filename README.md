@@ -14,7 +14,7 @@
 
 - 事件绑定 ()
 
-[模板语法指南https://angular.cn/guide/template-syntax)
+[模板语法指南](https://angular.cn/guide/template-syntax)
 
 ## 组件
 
@@ -38,7 +38,7 @@ Angular 应用程序由一棵组件树组成，每个 Angular 组件都有一个
 
 - app-product-list（紫色框）是你在上一节中修改过的商品列表。
 
-[“组件简介”](https://angular.cn/guide/architecture-components)
+[组件简介](https://angular.cn/guide/architecture-components)
 
 ## 输入
 
